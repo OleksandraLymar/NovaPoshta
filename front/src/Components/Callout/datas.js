@@ -1,0 +1,16 @@
+export default [
+    { css: 'https://kiev.informator.ua/wp-content/uploads/2019/06/6fb6564e-1756-4b42-9001-c5f47f819dbd-1.jpg', height: 400 },
+    { css: 'https://i0.wp.com/www.travelsignposts.com/Ukraine/files/2009/11/AJP_57051.jpg', height: 400 },
+    { css: 'https://ukranews.com/upload/news/2018/04/25/255ae0bce8235fd-5a30f36eb5104-528px-46-101-1483-lviv-opera-sam-7712-panorama_crop_1200.jpg', height: 500 },
+    { css: 'https://kirillovka.ks.ua/wp-content/uploads/2018/11/odessa-13-aleksey-chumak.jpg', height: 300 },
+    { css: 'http://karpaty.life/uploads/0/ivano-frankivska-oblast.jpg', height: 300 },
+    { css: 'https://www.orangesmile.com/common/img_cities_original/kharkiv--1041320-0.jpg', height: 400 },
+    { css: 'https://kiyavia.com/files/travel-provider/karpaty/Karpaty_leto_1920-min.jpg', height: 200 },
+    { css: 'https://planetofhotels.com/guide/sites/default/files/styles/paragraph__text_with_image___twi_image/public/2020-04/Vinnitsa_Morning_0.jpg', height: 300 },
+    { css: 'https://school-tur.com/wp-content/uploads/2016/08/%D0%BE%D0%B6%D0%B5%D1%80%D0%B5%D0%BB%D1%8C%D0%B5-%D0%B3%D1%83%D1%86%D1%83%D0%BB%D1%8C%D1%89%D0%B8%D0%BD%D1%8B-1680x672.jpg', height: 400 },
+    { css: 'https://gas-kvas.com/uploads/posts/2022-07/1656660052_1-gas-kvas-com-p-krasivie-foto-goroda-nikolaev-1.jpg', height: 400 },
+    { css: 'https://blog.pokupon.ua/wp-content/uploads/2021/05/dnepr.jpg', height: 300 },
+    { css: 'https://eimg.pravda.com/images/doc/a/7/a70d550-port.png', height: 250 },
+    { css: 'https://planetofhotels.com/guide/sites/default/files/styles/paragraph__text_with_image___twi_image/public/2021-03/Sitting-statue-of-liberty-Lviv.jpg', height: 400 },
+    { css: 'https://verge.zp.ua/wp-content/uploads/2020/10/19909-zaporozhye.jpg', height: 200 },
+]

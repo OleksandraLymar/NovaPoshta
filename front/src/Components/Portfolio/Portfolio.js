@@ -5,55 +5,52 @@ export default function Portfolio() {
         <section className="content-section" id="portfolio">
             <div className="container px-4 px-lg-5">
                 <div className="content-section-heading text-center">
-                    <h3 className="text-secondary mb-0">Portfolio</h3>
-                    <h2 className="mb-5">Recent Projects</h2>
+                    <h3 className="text-secondary mb-0 title-dostavka">Міжнародна доставка</h3>
+                    <h2 className="mb-5 under-title-text">Для клієнтів доступні наступні види послуг для доставки з України і в Україну</h2>
                 </div>
                 <div className="row gx-0">
                     <div className="col-lg-6">
                         <Link className="portfolio-item" to="/">
                             <div className="caption">
                                 <div className="caption-content">
-                                    <div className="h2">Stationary</div>
-                                    <p className="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                                    <div className="h2">Речі з дому за кордон</div>
+                                    <p className="mb-0">Тепер ти можеш відправляти посилки родині, друзям та колегам по всьому Світу так само легко, як ти звик відправляти Новою Поштою по Україні, завдяки Nova Poshta Global!</p>
                                 </div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio-1.jpg" alt="..."/>
+                            <img className="img-fluid img-car" src="assets/img/car.jpg" alt="..."/>
                         </Link>
                     </div>
                     <div className="col-lg-6">
                         <Link className="portfolio-item" to="/">
                             <div className="caption">
                                 <div className="caption-content">
-                                    <div className="h2">Ice Cream</div>
-                                    <p className="mb-0">A dark blue background with a colored pencil, a clip, and a tiny
-                                        ice cream cone!</p>
+                                    <div className="h2">Доставляємо Ваші речі</div>
+                                    <p className="mb-0 ">До Євросоюзу за привабливими тарифами!</p>
                                 </div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio-2.jpg" alt="..."/>
+                            <img className="img-fluid img-car" src="assets/img/es.jpg" alt="..."/>
                         </Link>
                     </div>
                     <div className="col-lg-6">
                         <Link className="portfolio-item" to="/">
                             <div className="caption">
                                 <div className="caption-content">
-                                    <div className="h2">Strawberries</div>
-                                    <p className="mb-0">Strawberries are such a tasty snack, especially with a little
-                                        sugar on top!</p>
+                                    <div className="h2">Глобальна доставка</div>
+                                    <p className="mb-0">Для доставки документів, вантажів та відправлень у більшість країн світу з України</p>
                                 </div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio-3.jpg" alt="..."/>
+                            <img className="img-fluid img-car" src="assets/img/doc.jpg" alt="..."/>
                         </Link>
                     </div>
                     <div className="col-lg-6">
                         <a className="portfolio-item" href="#!">
                             <div className="caption">
                                 <div className="caption-content">
-                                    <div className="h2">Workspace</div>
-                                    <p className="mb-0">A yellow workspace with some scissors, pencils, and other
-                                        objects.</p>
+                                    <div className="h2">NP Export Econom</div>
+                                    <p className="mb-0">Доставка за доступним тарифом в Молдову</p>
                                 </div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio-4.jpg" alt="..."/>
+                            <img className="img-fluid img-car" src="assets/img/moldova.jpg" alt="..."/>
                         </a>
                     </div>
                 </div>

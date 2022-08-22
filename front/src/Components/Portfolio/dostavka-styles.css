@@ -1,0 +1,14 @@
+.title-dostavka{
+    color:#ba0000;
+    font-size: 2.8rem !important;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.img-car{
+    height: 348px;
+}
+.under-title-text{
+    color:grey;
+    font-size: 20px !important;
+    margin-top: 13px;
+}

@@ -1,17 +1,66 @@
-import {Link} from "react-router-dom";
+import React from 'react'
+import { GoogleMap, useJsApiLoader,Marker  } from '@react-google-maps/api';
+import env from "react-dotenv";
 
-export default function Map() {
-    return (
-        <div className="map" id="contact">
-            <iframe
-                src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed">
-            </iframe>
+//стили для контейнера
+const containerStyle = {
+    width: '800px',
+    height: '400px',
+    marginTop: 60,
+    marginRight: 'auto',
+    marginLeft: 'auto'
+};
 
-            <br/>
+let center = {
+    lat: 46.482084,
+    lng: 30.731121
+};
 
-            <small>
-                <Link to="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></Link>
-            </small>
-        </div>
-    )
+function MapNovaPoshta(props) {
+    if (props.warehouses[0]) {
+        center = {
+            lat: parseFloat(props.warehouses[0].Latitude),
+            lng: parseFloat(props.warehouses[0].Longitude)
+        }
+    }
+
+
+    const { isLoaded } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey: env.REACT_APP_GOOGLE_MAP_API_KEY
+    })
+
+    const [map, setMap] = React.useState(null)
+
+    const onLoad = React.useCallback(function callback(map) {
+        const bounds = new window.google.maps.LatLngBounds(center);
+        map.fitBounds(bounds);
+        setMap(map)
+    }, [])
+
+    const onUnmount = React.useCallback(function callback(map) {
+        setMap(null)
+    }, [])
+
+    return isLoaded ? (
+        <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            onLoad={onLoad}
+            onUnmount={onUnmount}
+            zoom={10}
+        >
+            {props.warehouses.map(wh => {
+                console.log(wh.Latitude + " " + wh.Longitude)
+                let pos = {lat: parseFloat(wh.Latitude), lng: parseFloat(wh.Longitude) }
+                return (
+                    <Marker
+                        key={wh.Ref} position={pos} />
+                )
+            })}
+
+        </GoogleMap>
+    ) : <></>
 }
+
+export default React.memo(MapNovaPoshta)
